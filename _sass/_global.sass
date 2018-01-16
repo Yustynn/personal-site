@@ -4,13 +4,15 @@ $FOOTER_HEIGHT: 50px
   font-family: Quattrocento
 
 body
-  padding: 0 150px
   display: flex
+  padding: 0 150px
+  margin-top: 30px
   flex: 1
   flex-direction: column
 
 h1, h2, h3, h4, h5, h6
   font-family: Oxygen
+  margin: 0
 
   *
     font-family: Oxygen
@@ -22,9 +24,24 @@ ul
   list-style: none
   padding: 0
 
+a
+  text-decoration: none
+
 footer
   font-size: 12px
   min-height: $FOOTER_HEIGHT
+
+.row
+  display: flex
+  flex-direction: row
+
+.col
+  display: flex
+  flex-direction: column
+
+.full
+  display: flex
+  flex: 1
 
 .content
   flex: 1 0 auto

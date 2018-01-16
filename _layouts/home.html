@@ -1,25 +1,9 @@
-<html>
-  <head>
-    <title>Yustynn's Site</title>
-    <link rel='stylesheet' href='/css/styles.css' />
-  </head>
-  <body class='home'>
+{% include header.html %}
 
-    <div class='content'>
-      <main>
-        <h1>Hi, <span class='grey'>I'm Yustynn.</span></h1>
+<main>
+  <h1>Hi, <span class='grey'>I'm Yustynn.</span></h1>
 
-        <nav>
-          <ul>
-            <li>projects</li>
-            <li>about</li>
-            <li>contact</li>
-          </ul>
-        </nav>
+  {% include main-menu.html %}
+</main>
 
-      </main>
-    </div>
-
-    {% include footer.html %}
-  </body>
-</html>
+{% include footer.html %}
