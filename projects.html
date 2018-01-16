@@ -4,4 +4,10 @@
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: page
 header: selected projects
+title: projects
 ---
+
+{% for project in site.projects %}
+  <a class='project-title' href={{project.url}}>{{ project.title }}</a>
+  <span class='tags'>{{ project.tags | join: ' + '}}</span>
+{% endfor %}
