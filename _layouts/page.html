@@ -1,7 +1,14 @@
 {% include header.html %}
 
 <header class='row full'>
-  <h1>{{ page.header }}.</h1>
+  <div class='col'>
+    <h1>{{ page.header }}.</h1>
+    <ul class='unstyled row links'>
+      {% for link in page.links %}
+        <li><a href='{{ link.url }}'>{{ link.title }}</a></li>
+      {% endfor %}
+  </div>
+
   {% include main-menu.html %}
 </header>
 
