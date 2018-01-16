@@ -6,12 +6,17 @@ $FOOTER_HEIGHT: 50px
 body
   display: flex
   padding: 0 150px
+  position: relative
   margin-top: 30px
   flex: 1
   flex-direction: column
 
 footer
+  bottom: 0
+  font-size: 12px
+  position: absolute
   padding-top: 50px
+  padding-bottom: 10px
 
 foo
 
@@ -35,17 +40,13 @@ article
 a
   text-decoration: none
 
-footer
-  font-size: 12px
-  min-height: $FOOTER_HEIGHT
-
 .row
   display: flex
   flex-direction: row
 
-.col
-  display: flex
-  flex-direction: column
+//.col
+  //display: flex
+  //flex-direction: column
 
 .full
   display: flex
@@ -72,3 +73,13 @@ ul.unstyled
   list-style: none
   padding: 0
   
+@media screen and (max-width: 540px)
+  body
+    padding: 0 30px
+    padding-bottom: 30px
+
+  h1
+    font-size: 48px
+
+  .row
+    flex-direction: column
