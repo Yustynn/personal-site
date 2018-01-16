@@ -9,26 +9,32 @@ tags:
 ---
 <article class='overview'>
   <h2>Overview</h2>
-  <p>A fun (seriously, go try it!) 2D platformer game, built from scratch in
-    pretty much all JavaScript. It’s wrapped in a fullstack website (deployed on
-    heroku). Chock-full of cool features, I made this project with 3 friends from
-    Fullstack Academy over the course of 2 sleepless weeks. It was made a while
-    back, but it’s still my favorite
-    project to date.</p>
+  <p>Teralytics gave my 5-man team the challenge of figuring out what types of users (in terms of age,
+    interest, etc) go to each of 1000s of different websites. we were given
+    nothing
+    more than a large dataset containing anonymized users and their browsing
+    patterns. My team developed and implemented a multi-step process,
+    performing many tasks such as pre-categorizing a subset of the websites by
+  genre, web-scraping a bunch of the websites for more features, and
+  developing machine learning models to help with further categorization. I
+  worked on a lot of these parts and did most of the data wrangling, but the part I'm proudest of (which I did
+  single-handedly) was developing a fairly robust multi-threaded web scraper
+  that scraped thousands of websites within a half hour.</p>
 </article>
 
 <div class='row'>
-  <img class='screenshot' src='/public/images/girder-gus.gif' />
+  <div class='image-container'>
+    <img src='/public/images/teralytics.png' />
+  </div>
 
   <div class='col'>
     <article class='main-features'>
       <h2>Main Features</h2>
       <nav>
         <ul>
-          <li>HTML5 Game</li>
-          <li>Level Creator/Editor</li>
-          <li>Social Network</li>
-          <li>Ghost Feature (race an old playthrough!)</li>
+          <li>Dealt with dataset with millions of datapoints (82 million)</li>
+          <li>Developed multi-threaded web scraper with clear comments and
+            clean code</li>
         </ul>
       </nav>
     </article>
@@ -37,10 +43,9 @@ tags:
       <h2>Technology Used</h2>
       <nav>
         <ul>
-          <li>MEAN Stack (MongoDB, Express.js, Angular.js, Node.js)</li>
-          <li>Phaser.js</li>
-          <li>AWS (for storing level map screenshots)</li>
-          <li>Sass</li>
+          <li>Pandas and NumPy</li>
+          <li>Requests and Beautiful Soup</li>
+          <li>scikit-learn</li>
         </ul>
       </nav>
     </article>
