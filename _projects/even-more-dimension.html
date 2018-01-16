@@ -8,26 +8,30 @@ tags:
 ---
 <article class='overview'>
   <h2>Overview</h2>
-  <p>A fun (seriously, go try it!) 2D platformer game, built from scratch in
-    pretty much all JavaScript. It’s wrapped in a fullstack website (deployed on
-    heroku). Chock-full of cool features, I made this project with 3 friends from
-    Fullstack Academy over the course of 2 sleepless weeks. It was made a while
-    back, but it’s still my favorite
-    project to date.</p>
+  <p>The Learning Management System used by my university is problematic in 2
+    main ways: it’s difficult to download course materials (too many clicks to
+    get to the download pages, and you can only download individual files), and
+    it looks very old (modern websites tend to favour cleaner designs). I was
+    frustrated by these two pain points, so I made
+    a chrome extension that allows for one-click recursive downloads of course
+    materials, and makes the LMS look (objectively, in my opinion) better. More
+  than 25% of the undergraduate population is currently using my unofficial extension. </p>
 </article>
 
-<div class='row'>
-  <img class='screenshot' src='/public/images/girder-gus.gif' />
+<div class='row equal-children'>
+  <div class='image-container'>
+    <img src='/public/images/edim.gif' />
+  </div>
 
   <div class='col'>
     <article class='main-features'>
       <h2>Main Features</h2>
       <nav>
         <ul>
-          <li>HTML5 Game</li>
-          <li>Level Creator/Editor</li>
-          <li>Social Network</li>
-          <li>Ghost Feature (race an old playthrough!)</li>
+          <li>One-click button to recursively download course materials</li>
+          <li>Stylistic improvements (looks way better!)</li>
+          <li>No change to the underlying LMS - everything is done on top of it
+          on the user's browser</li>
         </ul>
       </nav>
     </article>
@@ -36,10 +40,9 @@ tags:
       <h2>Technology Used</h2>
       <nav>
         <ul>
-          <li>MEAN Stack (MongoDB, Express.js, Angular.js, Node.js)</li>
-          <li>Phaser.js</li>
-          <li>AWS (for storing level map screenshots)</li>
-          <li>Sass</li>
+          <li>JavaScript (ES6) (for the collated download functionality)</li>
+          <li>Chrome Extensions API</li>
+          <li>Sass (to override the ugly default styling)</li>
         </ul>
       </nav>
     </article>
