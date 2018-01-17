@@ -22,6 +22,18 @@ tags:
   that scraped thousands of websites within a half hour.</p>
 </article>
 
+<article class='my-contribution'>
+  <h2>My Contribution</h2>
+  <p>I did most of the data-wrangling, engineered the features and training
+    data for the website
+    category classifier, and single-handedly wrote a
+    multi-threaded web scraper in order to scrape 8,000 websites quickly
+    (within 30 mins). The challenges were the sheer size of data (82 million
+ datapoints in the full dataset) to
+    process, and I overcame them primarily by using multithreading, and
+    performant libraries (pandas, numpy).</p>
+</article>
+
 <div class='row equal-children'>
   <div class='image-container'>
     <img src='/public/images/teralytics.png' />
@@ -32,7 +44,7 @@ tags:
       <h2>Main Features</h2>
       <nav>
         <ul>
-          <li>Dealt with dataset with millions of datapoints (82 million)</li>
+          <li>Dealt with very large data (82 million entries)</li>
           <li>Developed multi-threaded web scraper with clear comments and
             clean code</li>
         </ul>
@@ -51,3 +63,21 @@ tags:
     </article>
   </div>
 </div>
+
+<article class='challenge'>
+  <h2>Web-Scraping Challenge</h2>
+  <p>The initial dataset we were provided with had 2 problems: 1) it was
+    really, really big and 2) it didn't have enough features (only anonymous
+    user IDs and sites these users visited).</p>
+
+  <p>In order to address these problems, we decided to focus on a subset of key websites
+    that we could scrape for further information (headers, titles and more
+    information that would clue us in on the website's category). I built the
+    web scraper from scratch (although afterwards, I found a library that does
+    multithreaded webscraping quite well). I come from a strong JavaScript background, and
+    I'm used to dealing with Promises. But in Python, Promises don't seem as
+    prevalent so I pushed myself to take the opportunity to learn
+    multithreading instead. It paid off well, and the 8000+ subset of domains
+    only took half an hour to scrape and process.
+  </p>
+</article>

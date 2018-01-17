@@ -11,6 +11,7 @@ links:
   - title: github
     url: https://github.com/LanaCoyote/girder-gus-maker
 ---
+
 <article class='overview'>
   <h2>Overview</h2>
   <p>A fun (seriously, go try it!) 2D platformer game, built from scratch in
@@ -19,6 +20,15 @@ links:
     Fullstack Academy over the course of 2 sleepless weeks. It was made a while
     back, but it’s still my favorite
     project to date.</p>
+</article>
+
+<article class='my-contribution'>
+  <h2>My Contribution</h2>
+  <p>I worked significantly on all parts. But the 'ghost' feature (playing
+    against your old playthrough) was primarily mine. I overcame storage size and
+    browser framerate syncing issues during the recording and playing back of
+    different playthroughs, and managed to build the ghost player code without
+  at all modifying the code controlling the main player.</p>
 </article>
 
 <div class='row equal-children'>
@@ -52,3 +62,42 @@ links:
     </article>
   </div>
 </div>
+
+<article class='challenge'>
+  <h2>Routes</h2>
+  <p>One of the things I'm proudest of is making a declarative set of
+    higher-order functions that made route creation for CRUD operations in express easy, and often
+    one easily understood line.</p>
+  <pre>
+    <code class='javascript'>
+      router.post('/', mustBeLoggedIn, createDoc('Level','creator'));
+    </code>
+  </pre>
+    <p class='caption' style='margin-top: -40px;'>
+      ( createDoc example for level creation route )
+    </p>
+</article>
+
+
+<article class='challenge'>
+  <h2>Ghost Syncing Issues</h2>
+  <p>Due to the variable rate at which browsers request animation frames, two
+    playthroughs grow more and more out of sync as time passes. This is problematic as the main
+    mechanism of moving the Ghost player is by playing back the recorded
+    actions of the player's previous playthrough (which assumes the exact same
+  framerate). A lack of synchronicity would lead to Ghost Gus improperly
+  walking off edges or into spikes or missing rotations. It was horrible.
+  </p>
+  
+  <p>In order to fix the syncing without taking up too much space per recorded
+  playthrough, I took snapshots of the main player's coordinates and
+  orientation in the game
+  level at fixed intervals during the playthrough. I then forced the Ghost onto
+  those coordinates with the proper orientation at those intervals during the
+  playback. It took some experimentation to get the interval just right so that
+  it wasn't too short (would take up excessive space), nor too long (there
+  would be a noticeable 'jump' as the Ghost suddenly appears in a new spot),
+  but in the end it worked really well.
+</p>
+</article>
+
