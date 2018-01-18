@@ -66,8 +66,10 @@ links:
 <article class='challenge'>
   <h2>Routes</h2>
   <p>One of the things I'm proudest of is making a declarative set of
-    higher-order functions that made route creation for CRUD operations in express easy, and often
-    one easily understood line.</p>
+    higher-order functions that made route creation for CRUD operations in
+    Express+MongoDB easy, and often
+    one easily understood line. I still use the code when I make a server with
+    using that tech.</p>
   <pre>
     <code class='javascript'>
       router.post('/', mustBeLoggedIn, createDoc('Level','creator'));
@@ -88,6 +90,23 @@ links:
   framerate). A lack of synchronicity would lead to Ghost Gus improperly
   walking off edges or into spikes or missing rotations. It was horrible.
   </p>
+  
+  <p>In order to fix the syncing without taking up too much space per recorded
+  playthrough, I took snapshots of the main player's coordinates and
+  orientation in the game
+  level at fixed intervals during the playthrough. I then forced the Ghost onto
+  those coordinates with the proper orientation at those intervals during the
+  playback. It took some experimentation to get the interval just right so that
+  it wasn't too short (would take up excessive space), nor too long (there
+  would be a noticeable 'jump' as the Ghost suddenly appears in a new spot),
+  but in the end it worked really well.
+</p>
+</article>
+
+<article class='challenge'>
+  <h2>Compressing Playthrough Recordings</h2>
+  <p>The main component being recorded at playthroughs was the player's input
+    controls (e.g. holding the right key</p>
   
   <p>In order to fix the syncing without taking up too much space per recorded
   playthrough, I took snapshots of the main player's coordinates and
