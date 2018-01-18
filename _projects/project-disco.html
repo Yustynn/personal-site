@@ -1,0 +1,89 @@
+---
+layout: page
+header: Sound-Based Light Controller [WIP]
+title: Sound-Based Light Controller [WIP]
+tags: 
+  - raspberry pi
+  - sound processing
+---
+<article class='overview'>
+  <h2>Overview</h2>
+  <p>A room-scale experimental project to visualize the sound using lights.
+    Pitch is mapped to color, and volume to the number of lights turned on. As
+    such, the room decorated with the lights changes color in accordance with the
+    sound of activities inside it (e.g. playing music, conversation)
+</p>
+</article>
+
+<article class='my-contribution'>
+  <h2>My Contribution</h2>
+  <p>I led a team of 5 people to do this project, and wrote most of the harder
+    parts of the code myself (including the sound processing and socket server to stream the
+    processed sound from a laptop to the Raspberry Pi)</p>
+</article>
+
+<article class='row'>
+  <div class='image-container'>
+    <img src='/public/images/disco.gif' style='max-height: 300px;' />
+  </div>
+
+  <div class='col'>
+    <article class='main-features'>
+      <h2>Main Features</h2>
+      <nav>
+        <ul>
+          <li>150 individual LEDs</li>
+          <li>Low latency (due to socket server)</li>
+        </ul>
+      </nav>
+    </article>
+
+    <article class='technology'>
+      <h2>Technology I Used</h2>
+      <nav>
+        <ul>
+          <li>Raspberry Pi</li>
+          <li>Python</li>
+          <li>Neopixels</li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</article>
+<article class='challenge'>
+  <h2>Smoothening</h2>
+  <p>The problem with this project is that audio readings tend to be very
+    jarring, with discontinuous bursts of sound followed by silence very
+    rapidly. Because of this, the pitch and volume changed dramatically far too
+    quickly, and would have led to drastic, jarring changes in the lighting. To
+    account for this, we implemented moving averages in order to smoothen out
+    the transitions.
+  </p>
+</article>
+
+<article class='challenge'>
+  <h2>Streaming Audio Values to Raspberry Pi</h2>
+  <p>Due to limitations of the Raspberry Pi (it can't simultaneously utilize
+    its sound card and control lights), we're temporarily using our laptop mics
+    to process the audio. Due to this, I designed all the code regarding sound
+    processing to be completely independent of the light controls, and to make
+    sure the two components (laptop and Raspberry Pi) knew as little about each
+    other as possible. Thus, the laptop streamed only pre-smoothened values of
+    pitch and volume to the Raspberry Pi. I used the websocket protocol over
+    TCP/IP to avoid latency issues.
+  </p>
+</article>
+
+<article class='challenge'>
+  <h2>Future Work</h2>
+  <p>This project is still a work in progress. We are working on several
+    improvements including:
+  </p>
+  <ul>
+    <li>Processing the sound on the Raspberry Pi with an external sound card (thus eliminating the need for
+      laptop)</li>
+    <li>Fade transitions for the light changes</li>
+    <li>A continuous spectrum of colors based off pitch (it's a discrete set of
+      10 colors right now)</li>
+  </ul>
+</article>
