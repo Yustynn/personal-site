@@ -1,0 +1,68 @@
+---
+layout: page
+header: Color Tracking to Cast Spells in Magicka 2
+title: Color Tracking to Cast Spells in Magicka 2
+tags: 
+  - computer vision
+  - gaming
+links:
+  - title: github
+    url: https://github.com/Yustynn/magicka2-real-spellcasting
+---
+<article class='overview'>
+  <h2>Overview</h2>
+  <p>So here's a crazy idea - what if you played computer games without controllers? What if you could cast spells by making arcane hand movements, just like a real wizard?</p>
+  <p>It turns out you can. All you need is to hold a strongly-colored object and some basic computer vision, and suddenly you've effectively got a magic wand.</p>
+</article>
+
+
+<article class='my-contribution'>
+  <h2>My Contribution</h2>
+  <p>I worked on getting the color tracking working, and on recording the symbols drawn by users (saving them as images). I also hooked up the webcam computer vision-based controller to the main socket server</p>
+</article>
+
+<article class='row'>
+  <div class='image-container'>
+    <img src='/public/images/magicka.gif' />
+  </div>
+
+  <div class='col'>
+    <article class='main-features'>
+      <h2>Main Features</h2>
+      <nav>
+        <ul>
+          <li>Multiplayer!</li>
+          <li>Works with any distinctly-colored object</li>
+          <li>Cast spells by drawing digits in the air with your right hand!</li>
+          <li>360° movement by moving your left hand!</li>
+        </ul>
+      </nav>
+    </article>
+
+    <article class='technology'>
+      <h2>Technology I Used</h2>
+      <nav>
+        <ul>
+          <li>OpenCV</li>
+          <li>Websockets</li>
+        </ul>
+      </nav>
+    </article>
+  </div>
+</article>
+<article class='challenge'>
+  <h2>Software Challenge</h2>
+  <p>I had no prior Unity, C# and Leap Motion experience. Unity in particular
+    took a while for me to self-learn. Beyond that, the biggest challenge I
+    faced was the procedural generation of the graph, and shading
+    it just the way I wanted (with the tron-like effect). It took a while to
+    learn how to set the triangles, and it was a very cool concept to learn.
+</p>
+</article>
+
+<article class='details'>
+  <h2>More Details</h2>
+  <p>The main idea here is to have "wands" which are distinctly colored objects (that are different enough from your surroundings for color tracking). The python script uses OpenCV in order to look at the webcam input, figure out where these objects are, and let you start drawing patterns and symbols.</p>
+  <p>In order to interpret the symbols and translate them into spells, funnily enough, we decided to use MNIST (the popular handwritten digit datasets). So the process is that you draw a digit, and the digit gets translated into a spell, sent over the socket server to a computer that is running linux and emulating Xbox contollers. This computer then emulates the right combination of key presses to cast the spell. Easy :)</p>
+  <p>One additional thing was 360 degree character movement. We did this by fixing an anchor point that you would move your left hand relative to. Flip your hand to reveal the color to the webcam and that spatial point is your anchor. Move your color relative to that, and your character moves in that relative direction.</p>
+</article>
