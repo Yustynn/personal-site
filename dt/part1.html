@@ -1,0 +1,56 @@
+---
+title: Part 1
+permalink: /dt/part1
+---
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Part 1: High Variance</title>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="/public/dt/part1/css/styles.css" />
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<div class="row">
+				<div id="btn1" class="btn waves-effect waves-light grid-item">
+					<h1>1</h1>
+					<p>Mean: 1</p>
+					<p>Variance: 1</p>
+				</div>
+				<div id="btn2" class="btn waves-effect waves-light grid-item">
+					<h1>2</h1>
+					<p>Mean: 1</p>
+					<p>Variance: 2</p>
+				</div>
+			</div>
+			<div class="row">
+				<div id="btn3" class="btn waves-effect waves-light grid-item">
+					<h1>3</h1>
+					<p>Mean: 1</p>
+					<p>Variance: 5</p>
+				</div>
+				<div id="btn4" class="btn waves-effect waves-light grid-item">
+					<h1>4</h1>
+					<p>Mean: 1.1</p>
+					<p>Variance: 100</p>
+				</div>
+			</div>
+
+			<div id="info">
+				<p>Clicks: <span id="clicks">0</span></p>
+				<p>Past reward: <span id="past">0</p>
+				<p>Total reward: <span id="total">0</span></p>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/public/dt/part1/js/app.js"></script>
+	</body>
+</html>

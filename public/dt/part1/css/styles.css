@@ -1,0 +1,31 @@
+#main {
+	margin-top: 60px;
+
+	display: flex;
+	flex-direction: column;
+
+	text-align: center;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	margin: 0;
+}
+
+.btn {
+	flex: 1;
+
+	height: 100%;
+	width: 100%;
+
+	margin: 16px;
+}
+
+.btn p {
+	font-size: 16px;
+}
+
+#info p {
+	font-size: 32px;
+}
