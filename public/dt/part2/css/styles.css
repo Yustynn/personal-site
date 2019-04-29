@@ -1,0 +1,80 @@
+html, body {
+	height: 100%;
+}
+
+#main {
+	height: 100%;
+	text-align: center;
+}
+
+#header {
+	text-align: center;
+}
+#header .icon-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#header i {
+	margin: 0px 8px;
+}
+
+#header-toggle {
+	margin: auto;
+}
+
+#grid {
+	display: grid;
+	grid-gap: 2px;
+	grid-auto-flow: row;
+}
+
+.cell {
+	background-color: #efefef;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.cell p {
+	text-align: left;
+	margin: 0;
+}
+.cell i.large {
+	color: black;
+}
+.cell .board-info {
+	width: 50%;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.info {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	margin: 24px 16px;
+}
+
+.info h3 {
+	margin: 0;
+}
+
+.btn.large {
+	padding: 0;
+
+	font-size: 90px;
+	width: 90px;
+	height: 90px;
+}

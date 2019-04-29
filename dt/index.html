@@ -1,0 +1,89 @@
+---
+title: Soup
+permalink: /dt/part2
+---
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title>Part 2: Griddy World</title>
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="/css/styles.css" />
+	</head>
+
+	<body>
+		<div id="main" class="container">
+			<h4>Welcome to Griddy World!</h4>
+			<div id="header">
+				<p>Move around the grid to collect as many points as you can. You have a limited number of moves.</p>
+
+				<p>There are 3 kinds of cells you can encounter: <b>Nothing</b>, <b>Monsters</b>, or <b>Treasure</b>.</p>
+
+				<div class="icon-info">
+					<i class="material-icons">fiber_manual_record</i>
+					<p><b>Nothing</b> will give you <b>0</b> points.</p>
+				</div>
+				<div class="icon-info">
+					<i class="material-icons">mood_bad</i>
+					<p><b>Monsters</b> give you <b>-10</b> points.</p>
+				</div>
+				<div class="icon-info">
+					<i class="material-icons">monetization_on</i>
+					<p><b>Treasure</b> gives you <b>10</b> points.</p>
+				</div>
+
+				<p>
+					Each cell has a different probability of encountering each of the 3.
+					<br>
+					Each cell also displays the occurrences of each encounter you have faced in that cell.
+				</p>
+
+				<p>Hitting the reset button will reset your score and position, but the probabilities stay the same.</p>
+			</div>
+
+			<div style="display: flex; margin: 16px;">
+				<a id="header-toggle" class="btn waves-effect waves-light">
+						Hide info
+						<i class="material-icons right">arrow_drop_up</i>
+				</a>
+			</div>
+
+			<div id="grid" class="container"></div>
+
+			<div id="info" class="container">
+				<div>
+					<div class="info">
+						<i class="material-icons medium">directions_run</i>
+						<h3 id="steps"></h3>
+					</div>
+					<div class="info">
+						<i class="material-icons medium">attach_money</i>
+						<h3 id="reward"></h3>
+					</div>
+				</div>
+				<div class="info">
+					<i id="reset" class="btn yellow waves-effect waves-light material-icons large" style="border-radius: 50%">autorenew</i>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/dt/part2/js/chartjs.js"></script>
+		<script type="text/javascript" src="/dt/part2//js/results.js"></script>
+		<script type="text/javascript" src="/dt/part2//js/presets.js"></script>
+		<script type="text/javascript" src="/dt/part2//js/board.js"></script>
+		<script type="text/javascript" src="/dt/part2/js/player.js"></script>
+		<script type="text/javascript" src="/dt/part2/js/observations.js"></script>
+		<script type="text/javascript" src="/dt/part2/js/render.js"></script>
+		<script type="text/javascript" src="/dt/part2/js/header.js"></script>
+		<script type="text/javascript" src="/dt/part2/js/log.js"></script>
+		<script type="text/javascript" src="/dt/part2/js/app.js"></script>
+	</body>
+</html>
